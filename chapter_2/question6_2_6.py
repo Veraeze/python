@@ -5,3 +5,5 @@ if integer % 2 == 0:
 
 if integer % 2 != 0:
     print(integer, 'is an odd number')
+
+# refactor this to simple if-else
