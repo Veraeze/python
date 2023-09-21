@@ -1,9 +1,7 @@
 integer = int(input('Enter an integer: '))
 
-if integer % 2 == 0:
-    print(integer, 'is an even number')
+result = f"{integer} is an even number" if integer % 2 == 0 else f"{integer} is an odd number"
 
-if integer % 2 != 0:
-    print(integer, 'is an odd number')
+print(result)
 
 # refactor this to simple if-else
