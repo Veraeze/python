@@ -1,4 +1,4 @@
-def rate(percentage):
+def rate(percentage: int) -> int:
     if percentage < 50:
         return percentage * 160 + 5000
     elif percentage <= 59:
@@ -9,33 +9,33 @@ def rate(percentage):
         return percentage * 500 + 5000
 
 
-def copy(copies):
+def copy(copies: int) -> int:
     if 0 < copies <= 4:
         return 2000
-    elif 4 < copies <= 9:
+    elif copies <= 9:
         return 1800
-    elif 9 < copies <= 29:
+    elif copies <= 29:
         return 1600
-    elif 29 < copies <= 49:
+    elif copies <= 49:
         return 1500
-    elif 49 < copies <= 99:
+    elif copies <= 99:
         return 1300
-    elif 99 < copies <= 199:
+    elif copies <= 199:
         return 1200
-    elif 199 < copies <= 499:
+    elif copies <= 499:
         return 1100
     else:
         return 1000
 
 
-def is_even(integer):
+def is_even(integer: int) -> bool:
     if integer % 2 == 0:
         return True
     else:
         return False
 
 
-def is_prime_number(integer):
+def is_prime_number(integer: int) -> bool:
     result = 0
     count = 1
     while count <= integer:
@@ -48,14 +48,14 @@ def is_prime_number(integer):
         return False
 
 
-def subtract(first_number, second_number):
+def subtract(first_number: int, second_number: int) -> int:
     if first_number > second_number:
         return first_number - second_number
     else:
         return second_number - first_number
 
 
-def divide(first_integer, second_integer):
+def divide(first_integer: int, second_integer: int) -> float:
     result = first_integer / second_integer
     quotient = round(result, 2)
     if second_integer != 0:
@@ -64,7 +64,7 @@ def divide(first_integer, second_integer):
         return 0
 
 
-def factor_of(integer):
+def factor_of(integer: int) -> int:
     factor = is_prime_number(integer)
     if factor > 0:
         return factor
@@ -72,14 +72,14 @@ def factor_of(integer):
         return 0
 
 
-def is_square(integer):
+def is_square(integer: int) -> bool:
     for count in range(integer):
         if integer / count == count:
             return True
     return False
 
 
-def is_palindrome(integer):
+def is_palindrome(integer: int) -> bool:
     first = integer / 10000
     last = integer % 10
     if first == last:
@@ -88,7 +88,7 @@ def is_palindrome(integer):
         return False
 
 
-def factorial_of(integer):
+def factorial_of(integer: int) -> int:
     factorial = 1
     is_negative_number = integer < 0
     if is_negative_number:
@@ -100,9 +100,22 @@ def factorial_of(integer):
     return factorial
 
 
-def raise_power(base, power):
+def raise_power(base: int, power: int) -> int:
     result = 1
+    for i in range(power):
+        result *= base
+    return result
 
 
+def multiply(*numbers: int) -> int:
+    product = 1
+    for i in numbers:
+        product *= i
+    return product
 
 
+def average(*integers) -> float:
+    total = 0
+    for scores in integers:
+        total += scores
+    return total / len(integers)
