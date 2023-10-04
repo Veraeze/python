@@ -119,3 +119,85 @@ def average(*integers) -> float:
     for scores in integers:
         total += scores
     return total / len(integers)
+
+
+def largest_element(integers: int) -> int:
+    largest = 0
+    for number in integers:
+        if number > largest:
+            largest = number
+    return largest
+
+
+def reverse_list(integers):
+    rev_integers = []
+    for i in reversed(integers):
+        rev_integers.append(i)
+    return rev_integers
+
+
+def check_element(integer: int, integers) -> bool:
+    for number in integers:
+        if number == integer:
+            return True
+    return False
+
+
+def odd_positions(integers):
+    odd = []
+    for number in range(integers[0], len(integers), 2):
+        odd.append(number)
+    return odd
+
+
+def even_positions(integers):
+    even = []
+    for number in range(integers[1], len(integers) + 1, 2):
+        even.append(number)
+    return even
+
+
+def running_total(integers):
+    total = 0
+    result = []
+    for number in integers:
+        total += number
+        result.append(total)
+    return result
+
+
+def word_palindrome(word: str) -> bool:
+    for letter in word:
+        if word[0] == word[len(word)-1]:
+            return True
+    return False
+
+
+def for_sum(integers) -> int:
+    add = 0
+    for number in integers:
+        add += number
+    return add
+
+
+def while_sum(integers) -> int:
+    add = 0
+    count = 0
+    while count < len(integers):
+        for number in integers:
+            add += number
+            count += 1
+    return add
+
+
+def concatenate_lists(letters, integers):
+    first_input = []
+    second_input = []
+    for letter in letters:
+        first_input.append(letter)
+    for integer in integers:
+        second_input.append(integer)
+    return first_input + second_input
+
+
+
