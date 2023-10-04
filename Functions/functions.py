@@ -198,6 +198,4 @@ def concatenate_lists(letters, integers):
     for integer in integers:
         second_input.append(integer)
     return first_input + second_input
-
-
-
+   
