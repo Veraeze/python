@@ -198,4 +198,10 @@ def concatenate_lists(letters, integers):
     for integer in integers:
         second_input.append(integer)
     return first_input + second_input
-   
+
+
+def triple(numbers):
+    new = []
+    for number in numbers:
+        new.append(number**3)
+    return new
