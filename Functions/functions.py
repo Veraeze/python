@@ -205,3 +205,11 @@ def triple(numbers):
     for number in numbers:
         new.append(number**3)
     return new
+
+
+def remove_duplicate_array(*numbers):
+    new = ()
+    for number in range(len(numbers)):
+        if numbers[number] not in new:
+            new = new + (numbers[number])
+    return new

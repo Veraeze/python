@@ -1,3 +1,7 @@
+from Functions import functions
+from Functions import tuples
+
+
 def reverse_tuple(*tuple1) -> tuple:
     rev_integers = ()
     for i in reversed(tuple1):
@@ -8,9 +12,17 @@ def reverse_tuple(*tuple1) -> tuple:
 def nested_tuple(*tuple2):
     numbers = ()
     integers = ()
-    tuple2[0] = numbers
-    tuple2[1] = integers
-    return numbers.index(numbers)
+
+    for index, value in enumerate(tuple2):
+        if index == 1:
+            numbers += index - 1,
+            numbers += value[1],
+
+        if index == 2:
+            integers += index - 1,
+            integers += value[2],
+
+    return numbers, integers
 
 
 def swap_tuple(*tuple3) -> tuple:
@@ -47,7 +59,17 @@ def return_duplicate(*tuple5):
             new_duplicate = new_duplicate + (duplicate[number], )
 
     rev_duplicate = ()
-    for number in reversed(new_duplicate):
-        rev_duplicate = rev_duplicate + (number, )
+    for i in reversed(new_duplicate):
+        rev_duplicate = rev_duplicate + (i, )
 
     return rev_duplicate
+
+
+def my_sort_method(list1, rev=False):
+    for i in range(0, len(list1)):
+        for j in range(i + 1, len(list1)):
+            if list1[i] > list1[j]:
+                list1[i], list1[j] = list1[j], list1[i]
+            if list1[i] < list1[j] and rev == True:
+                list1[i], list1[j] = list1[j], list1[i]
+    return list1
