@@ -207,9 +207,9 @@ def triple(numbers):
     return new
 
 
-def remove_duplicate_array(*numbers):
-    new = ()
+def remove_duplicate_array(numbers: list):
+    new = []
     for number in range(len(numbers)):
         if numbers[number] not in new:
-            new = new + (numbers[number])
+            new.append(numbers[number])
     return new
