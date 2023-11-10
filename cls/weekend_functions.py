@@ -1,10 +1,9 @@
-from turtle import pd
-
-
 def list_to_dictionary(inputs: list):
     output = {}
     for i in inputs:
         key = i[0]
+        if key in output:
+            key = i[0].upper()
         output.update({key: i})
     return output
 
@@ -20,7 +19,7 @@ def two_list_to_dictionary(input1: list, input2: list):
 
 
 def largest_minus_smallest(list1: list):
-    return max(list1)-min(list1)
+    return max(list1) - min(list1)
 
 
 def greater_than_value(sam_list: list, k: int):
@@ -39,7 +38,6 @@ def empty_string(samp_input: list):
 
 
 def split_list(input0: list):
-    ouput0 = [input0[i] for i in range(len(input0)//2)]
+    ouput0 = [input0[i] for i in range(len(input0) // 2)]
     output1 = [j for j in input0 if j not in ouput0]
     return f'{ouput0}, {output1}'
-

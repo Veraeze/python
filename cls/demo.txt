@@ -1,0 +1,4 @@
+my name is vera
+im trying to create a file in python
+lets see how well this works
+this is to append to demo
