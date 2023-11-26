@@ -39,18 +39,5 @@
 # print(age_check(-2))
 
 
-class Point:
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
-
-    def draw(self):
-        print(f"drawing from point {self.a} to point {self.b}")
-
-
-point1 = Point(1, 2)
-point2 = Point(5, 6)
-point1.draw()
-point2.draw()
 
 
